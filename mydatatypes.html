@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatype</title>
+</head>
+
+<body>
+    <script>
+        //strings
+        let fname = "John"
+        let lname = "Ng'ang'a"
+        //Display the full name with a space between
+        let fullname = fname + " " + lname;
+        console.log(fullname);
+        let fullnamt = `${fname} ${lname}`;
+        console.log(fullnamt);
+        //Accessing methods / operations
+        console.log(fullname.replace);
+        console.log(fullname.substring(0,2));
+        //indexof
+        const str = "Hello, World!";
+        console.log(str.indexOf("o")); // Output: 4 (index of the first 'o' in the string)
+        console.log(str.indexOf("Z")); // Output: -1 (Z is not present in the string)
+        console.log(fullname.replace('john','peter'));
+        console.log(fullname.charAt(3));
+        console.log(fullname.substring(6,14));
+        console.log(fullname.slice(6,14));
+        console.log(fullname.toLocaleLowerCase());
+        console.log(fullname.toLocaleUpperCase());
+        console.log(fullname.endsWith('n'));
+        console.log(fullname.length);
+        
+
+    </script>
+</body>
+
+</html>
