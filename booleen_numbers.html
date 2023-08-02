@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Numbers & Booleens</h1>
+    <script>
+        function isBetween0And100(number) {
+            return number >= 0 && number <= 100;
+        }
+
+        let myNumber = 50;
+        console.log(isBetween0And100(myNumber)); // Output: true
+
+        myNumber = 150;
+        console.log(isBetween0And100(myNumber)); // Output: false
+
+        function isValidEmail(email) {
+            // Check if the email contains exactly one '@' symbol
+            let atIndex = email.indexOf('@');
+            if (atIndex === -1 || email.indexOf('@', atIndex + 1) !== -1) {
+                return false;
+            }
+
+            // Check if the email contains a dot (.) after the '@' symbol
+            let dotIndex = email.indexOf('.', atIndex + 1);
+            if (dotIndex === -1 || dotIndex === atIndex + 1 || dotIndex === email.length - 1) {
+                return false;
+            }
+
+            return true;
+        }
+
+        // Test cases
+        let email1 = "test@example.com";
+        console.log(isValidEmail(email1)); // Output: true
+
+        let email2 = "test@.com"; // Invalid email, missing domain name
+        console.log(isValidEmail(email2)); // Output: false
+
+        let email3 = "invalid.email@server"; // Invalid email, missing top-level domain
+        console.log(isValidEmail(email3)); // Output: false
+
+
+
+        function isValidKenyanPhoneNumber(phoneNumber) {
+            // Remove any non-numeric characters from the input
+            let cleanNumber = phoneNumber.replace(/[^\d]/g, '');
+
+            // Check if the number has a valid length
+            if (![10, 12].includes(cleanNumber.length)) {
+                return false;
+            }
+
+            // Check if the number starts with a valid Kenyan country code (254) or the plus sign (+254)
+            if (cleanNumber.length === 12 && !cleanNumber.startsWith('254')) {
+                return false;
+            } else if (cleanNumber.length === 10 && !['254', '7', '1'].includes(cleanNumber.substring(0, 1))) {
+                return false;
+            }
+
+            // Check if the remaining digits are all numeric
+            if (!/^\d+$/.test(cleanNumber.substring(3))) {
+                return false;
+            }
+
+            return true;
+        }
+
+        // Test cases
+        let phoneNumber1 = "+254712345678";
+        console.log(isValidKenyanPhoneNumber(phoneNumber1)); // Output: true
+
+        let phoneNumber2 = "254712345678";
+        console.log(isValidKenyanPhoneNumber(phoneNumber2)); // Output: true
+
+        let phoneNumber3 = "0712345678";
+        console.log(isValidKenyanPhoneNumber(phoneNumber3)); // Output: true
+
+        let phoneNumber4 = "712345678";
+        console.log(isValidKenyanPhoneNumber(phoneNumber4)); // Output: true
+
+        let phoneNumber5 = "0112345678"; // Invalid prefix
+        console.log(isValidKenyanPhoneNumber(phoneNumber5)); // Output: false
+
+        let phoneNumber6 = "112345678"; // Invalid prefix
+        console.log(isValidKenyanPhoneNumber(phoneNumber6)); // Output: false
+
+
+
+
+    </script>
+</body>
+
+</html>
