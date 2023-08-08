@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .h1 {
+            font-style: italic;
+            color: blue;
+        }
+    </style>
+    <h1>Json (Javascript object Notation)</h1>
+    <script>
+        let person = {
+            "first_name": "Steve",
+            "last_name": "Muthure",
+            "age": 30,
+            "locations": ["Nrb", "Msa", "Ktl", "Kti"]
+            // "kins": [{ "name": "Mary", "phone": "07254567" },
+            //          { "name": "Tom", "phone": "074356674" }
+            //         ]
+        }
+        //Strings,Numbers,Booleans,Arrarys,objects
+        //if Esle if else
+        console.log(person);
+        console.log(person["last_name"]);
+        // Display the city "Kitale" from the "locations" array
+        console.log(person["locations"][2]);  // "Ktl" is at index 2, which corresponds to "Kitale"
+        // Display Tom's phone number from the "Kins" array
+        // console.log(person["kins"][1]["phone"]);  // "Tom" is at index 1, and "phone" is the property
+
+        //1.create an object that holds voters details for all voters in Kenya in IEBC
+        //2. Ensure name,county,sub-county are stored for each voter.
+        //3. Add at least 3 voters in your object
+        // Create an object to hold voter details
+        let iebcVoters = {
+            "308880": {
+                "name": "Leo Steve",
+                "county": "Nairobi",
+                "sub_county": "Embakasi"
+            },
+            "308881": {
+                "name": "Jane Soko",
+                "county": "Mombasa",
+                "sub_county": "Nyali"
+            },
+            "308882": {
+                "name": "Alice Johnson",
+                "county": "Nakuru",
+                "sub_county": "Naivasha"
+            }
+        };
+
+        // Accessing and displaying voter details using voter IDs
+        for (let voterId in iebcVoters) {
+            let voter = iebcVoters[voterId];
+            console.log("Voter ID:", voterId);
+            console.log("Name:", voter.name);
+            console.log("County:", voter.county);
+            console.log("Sub-county:", voter.sub_county);
+            console.log("IEBC- Cleak");
+        }
+
+
+    </script>
+</body>
+
+</html>
