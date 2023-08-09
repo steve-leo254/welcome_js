@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Countries</h1>
+    <script src="countries.js"></script>
+    <script>
+        let populationCategories = {
+            "0-50m": 0,
+            "50m-100m": 0,
+            ">100m": 0
+        };
+        for (const country of mycountries) {
+            const population = country.population;
+
+            if (population <= 50000000) {
+                populationCategories["0-50m"]++;
+            } else if (population <= 100000000) {
+                populationCategories["50m-100m"]++;
+            } else {
+                populationCategories[">100m"]++;
+            }
+        }
+        console.log(mycountries)
+    </script>
+</body>
+
+</html>

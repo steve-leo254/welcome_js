@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>loops</h1>
+    <script>
+        //for
+        //let...= strating expression,condition,intrement(etaration expression) 
+        // for (let i = 0;i < 10; i++){
+        //continue skip etteration 
+            // if (i == 3){
+            //    continue; 
+            // }
+        //break statment used to break loops
+        //     if (i == 7){
+        //         break;
+        //     }
+
+        //     console.log(i)
+        // }
+
+        //While 
+        // let e = 0;
+
+        // while (e<10){
+        //     console.log(e);
+
+        //     e++;
+        // }
+
+        //do while--allows you to garanty degardless of the condition
+        // let c = 15;
+        // do{
+        //    console.log(c)
+           //even though condition is not true it will still run
+
+
+        //    c--;//decrease value of c (-1) 
+        // } while(c < 10 && c > 0);
+
+        //for in loop used ot loop through an object
+
+        // const person ={
+        //     name: "stee"
+        //     age:29,
+        //     occupation:"Web Developer"
+        // };
+        //prop used to lop in
+        // for (const prop in person){
+        //     console.log(prop)
+        //access property
+            // console.log(person[prop])
+        // }
+        // for.....of--- eterable objects
+        // const Numbers = [5,6,7,13];
+        
+        // for (const n of Numbers){
+        //     console.log(n)
+        // }
+        //nod-list(queryselecta)
+        // const listitems =document.querySelectorAll("li");
+        
+        // for (const li of listitems){
+        //     console.log(li);
+        // }
+
+        //forEach
+        const Numbers = [5,10,14];
+        //callbackfunction t = each number arrey, p = index of there number
+        Numbers.forEach((t,p) => {
+            console.log(t);
+            console.log(p);
+        });
+    </script>
+</body>
+</html>
