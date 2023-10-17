@@ -38,6 +38,14 @@
 
         // Log the result
         console.log(AlgeriaInfo);
+        
+        // Function to find a country by name
+        function findCountry2(countryName, dataArray) {
+            return dataArray.find(item => item.country === countryName);
+        }
+        // Get information for "Bahamas"
+        const BahamasInfo = findCountry2("Bahamas",mycountries);
+        console.log(BahamasInfo);
     </script>
 </body>
 
